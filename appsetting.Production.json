@@ -1,13 +1,13 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=147.93.32.147;Database=pyre;User=fore_forestbarber;Password=KC6LF6ofFy92#wD#;"
+    "DefaultConnection": "Server=147.93.32.147;Database=pani_paniol;User=pani_paniol;Password=Be*FaLz^ndrtDa89"
   },
   "Jwt": {
     "Key": "production-key-super-segura",
     "Issuer": "tu-dominio.com",
     "Audience": "tu-dominio.com"
   },
-  "AllowedHosts": "forestbarber.site",
+  "AllowedHosts": "*",
   "Logging": {
     "LogLevel": {
       "Default": "Information",
