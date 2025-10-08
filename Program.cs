@@ -54,7 +54,7 @@ builder.Logging.SetMinimumLevel(LogLevel.Information); // para tu código, info+
 //Repos
 
 
-//Cambio
+//Cambio: permitir cualquier origen (usar solo en desarrollo o si entiendes los riesgos)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(
@@ -62,14 +62,9 @@ builder.Services.AddCors(options =>
         policy =>
         {
             policy
-                .WithOrigins(
-                    "http://localhost:4200", // Desarrollo
-                    "http://localhost:4200/", // Desarrollo
-                    "https://forestbarber.site" // Producción
-                )
+                .AllowAnyOrigin()
                 .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials();
+                .AllowAnyHeader();
         }
     );
 });
