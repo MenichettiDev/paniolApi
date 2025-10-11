@@ -19,6 +19,8 @@ using pyreApi.Repositories;
 using pyreApi.Services;
 
 var builder = WebApplication.CreateBuilder(args); // aca lo q se hace es crear la instancia de la app
+builder.WebHost.UseUrls("http://0.0.0.0:4000");
+
 
 builder.Logging.ClearProviders(); // esto es para limpiar los proveedores de logging
 builder.Logging.AddConsole(); // esto es para agregar el proveedor de logging de consola
@@ -243,7 +245,7 @@ app.MapControllers(); // esto es para habilitar los enroutadores de los controla
 //Original
 // app.Run();
 //Cambio
-app.Run("http://localhost:4000");
+app.Run();
 
 
 
